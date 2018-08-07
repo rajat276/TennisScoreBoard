@@ -70,6 +70,7 @@ public class ScoreBoard {
             updatePoint(score.charAt(i));
         }
         printScoreBoard();
+        clear();
     }
 
     public void updatePoint(char ch){
@@ -135,6 +136,14 @@ public class ScoreBoard {
         }
         else
             return "Advantage" + (getPointA()> getPointB() ? " - A" : " - B");
+    }
+    public void clear(){
+        pointA = 0;
+        pointB = 0;
+        gameA = 0;
+        gameB = 0;
+        setA = 0;
+        setB = 0;
     }
 
 }
